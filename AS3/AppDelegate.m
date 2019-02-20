@@ -17,6 +17,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    NSUserDefaults *store = [NSUserDefaults standardUserDefaults];
+    NSString* token = [store valueForKey:@"token"];
+    [SharkORM setDelegate:self];
+    [SharkORM openDatabaseNamed:@"myDatabase"];
+    if (!token) {
+        self.window.rootViewController = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"login"];
+    }
+    
     return YES;
 }
 

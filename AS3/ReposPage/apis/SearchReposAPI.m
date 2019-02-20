@@ -1,0 +1,34 @@
+//
+//  SearchReposAPI.m
+//  AS3
+//
+//  Created by zaka on 16/03/2018.
+//  Copyright © 2018 zaka. All rights reserved.
+//
+
+#import "SearchReposAPI.h"
+
+@implementation SearchReposAPI{
+    NSString* _qstring;
+    NSInteger _page;
+}
+
+-(id)initWithSearchStr:(NSString *)qstring AndPage:(NSInteger)page{
+    self = [super init];
+    if (self) {
+        _qstring = qstring;
+        _page = page;
+    }
+    return self;
+}
+
+-(NSString *)URL{
+    return @"/search/repositories";
+}
+
+-(NSDictionary *)params{
+    NSDictionary * paramsDictionary = [[NSDictionary alloc] initWithObjectsAndKeys:[NSString stringWithFormat:@"%ld",_page],@"page",_qstring,@"q", nil];
+    return paramsDictionary;
+}
+
+@end

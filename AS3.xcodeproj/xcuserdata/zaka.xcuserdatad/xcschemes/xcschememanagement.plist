@@ -7,7 +7,25 @@
 		<key>AS3.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>0</integer>
+			<integer>16</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>31E6BCEC204FC15600500C40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31E6BD07204FC15600500C40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>31E6BD12204FC15600500C40</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>
